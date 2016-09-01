@@ -4,11 +4,11 @@ var topicArray = ["Jif", "Gif", "Cookies", "Deal With It", "Can't Handle My Swag
 
 
 window.onload = function(){
-	$("#buttonContainer").hide();
+	$("#buttonContainer, .row2").hide();
 }
 
 $(".image-responsive").click(function(){
-	$("#buttonContainer").show();
+	$("#buttonContainer, .row2").show();
 	$("#title").remove();
 });
 
@@ -25,7 +25,7 @@ $(".image-responsive").click(function(){
 
 createButtons();
 
-$("button").on('click', function(){
+$(".topicName").on('click', function(){
 
 	$("#gifView").empty();
 
@@ -64,6 +64,15 @@ $("button").on('click', function(){
 	});
 
 
+
+$(".submit").click(function(){
+	$("#buttonContainer").empty();
+	var newGif = $(".jifInput").val().trim();
+	topicArray.push(newGif);
+	createButtons();
+	return false;
+	console.log(topicArray);
+});
 
 
 

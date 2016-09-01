@@ -29,12 +29,7 @@ img {
 	margin-left: 3%;
 }
 
-#submit {
-	float: right;
-}
-
 #buttonContainer {
-	clear: both;
 	margin: 0;
 	margin-right: 2%;
 	margin-left: 2%;
@@ -44,6 +39,14 @@ img {
 #title {
 	margin-top: 5%;
 	text-align: center;
+}
+
+#textField {
+	margin-top: 10%;
+}
+
+.submit {
+	margin-left: 5px;
 }
 
 .gifDiv {
