@@ -56,6 +56,8 @@ $("button").on('click', function(){
 	 		//display gif
 	 		var gifImage = $("<img>").attr('src', results[i].images.fixed_height.url);
 
+	 		gifDiv.append(gifImage);
+
 	 		$('#gifView').append(gifDiv);
 	 		};
 	 	});
