@@ -1,6 +1,6 @@
 var topicArray = ["Jif", "Gif", "Cookies", "Deal With It", "Can't Handle My Swag", "Falling", 
 	"Party Hard", "Super Mario", "LOL", "Mashup", "Timelapse", "Slapping", "Slow Mo", 
-	"Weird", "8 Bit", "MacGyver", "Carlton Bling"];
+	"Weird", "8 Bit", "MacGyver", "MacGruber", "Carlton Bling"];
 
 
 window.onload = function(){
@@ -9,6 +9,7 @@ window.onload = function(){
 
 $(".image-responsive").click(function(){
 	$("#buttonContainer").show();
+	$("#title").remove();
 });
 
 	//create gif buttons
@@ -54,8 +55,6 @@ $("button").on('click', function(){
 
 	 		//display gif
 	 		var gifImage = $("<img>").attr('src', results[i].images.fixed_height.url);
-
-	 		gifDiv.append(gifImage);
 
 	 		$('#gifView').append(gifDiv);
 	 		};
