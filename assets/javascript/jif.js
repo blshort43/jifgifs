@@ -5,27 +5,15 @@ var topicArray = ["Jif", "Gif", "Cookies", "Deal With It", "Can't Handle My Swag
 
 window.onload = function(){
 	$("#buttonContainer, .row2").hide();
-}
+
+};
 
 $(".image-responsive").click(function(){
 	$("#buttonContainer, .row2").show();
 	$("#title").remove();
 });
 
-	//create gif buttons
-	function createButtons(){
-	for (var i=0; i<topicArray.length; i++){
-		var button=$("<button>");
-		button.addClass("topicName");
-		button.attr("name", topicArray[i]);
-		button.text(topicArray[i]);
-		$("#buttonContainer").append(button);
-	};
-};
-
-createButtons();
-
-$(".topicName").on('click', function(){
+	function displayGifs(){
 
 	$("#gifView").empty();
 
@@ -61,9 +49,18 @@ $(".topicName").on('click', function(){
 	 		$('#gifView').append(gifDiv);
 	 		};
 	 	});
-	});
+	};
 
-
+	//create gif buttons
+	function createButtons(){
+	for (var i=0; i<topicArray.length; i++){
+		var button=$("<button>");
+		button.addClass("topicName");
+		button.attr("name", topicArray[i]);
+		button.text(topicArray[i]);
+		$("#buttonContainer").append(button);
+	};
+};
 
 $(".submit").click(function(){
 	$("#buttonContainer").empty();
@@ -74,7 +71,7 @@ $(".submit").click(function(){
 	console.log(topicArray);
 });
 
+$(document).on("click", ".topicName", displayGifs)
 
-
-
+createButtons();
 
