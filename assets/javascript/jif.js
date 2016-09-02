@@ -46,7 +46,6 @@ function displayGifs() {
                 gifImage.attr("data-animate", results[i].images.fixed_height.url);
                 gifImage.attr("data-state", "still");
 
-
                 gifDiv.append(gifImage);
 
                 $('#gifView').append(gifDiv);
