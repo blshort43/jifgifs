@@ -1,6 +1,7 @@
 var topicArray = ["Jif", "Gif", "Cookies", "Deal With It", "Can't Handle My Swag", "Falling",
-    "Party Hard", "Super Mario", "LOL", "Mashup", "Timelapse", "Slapping", "Slow Mo",
-    "Weird", "8 Bit", "MacGyver", "MacGruber", "Carlton Bling"];
+    "Party Hard", "Super Mario", "LOL", "Mashup", "Timelapse", "Slow Mo",
+    "Weird", "8 Bit", "MacGyver", "MacGruber", "Carlton Bling"
+];
 
 window.onload = function() {
     $("#buttonContainer, .row2").hide();
@@ -77,21 +78,25 @@ $(".submit").click(function() {
         return false;
     }
 });
-
+$("#id_of_textbox").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#id_of_button").click();
+    }
+});
 
 $(document).on("click", ".topicName", displayGifs)
 
-$(document).on("click", "img", function(){
+$(document).on("click", "img", function() {
 
-	        var state = $(this).attr('data-state'); 
+    var state = $(this).attr('data-state');
 
-            if ( state == 'still'){
-                $(this).attr('src', $(this).data('animate'));
-                $(this).attr('data-state', 'animate');
-            }else{
-                $(this).attr('src', $(this).data('still'));
-                $(this).attr('data-state', 'still');
-            }
-        })
+    if (state == 'still') {
+        $(this).attr('src', $(this).data('animate'));
+        $(this).attr('data-state', 'animate');
+    } else {
+        $(this).attr('src', $(this).data('still'));
+        $(this).attr('data-state', 'still');
+    }
+})
 
 createButtons();
