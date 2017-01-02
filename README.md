@@ -1,4 +1,4 @@
 # jifgifs
 Jif Gifs! Add, pause & play gifs!
 
-![alt text](/responsivePortfolio.png "jifgifs.png")
+![alt text](/responsivePortfolio.png "JifGifs.png")
