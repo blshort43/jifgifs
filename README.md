@@ -1,2 +1,4 @@
 # jifgifs
-Jif Gifs! Week #6 Homework
+Jif Gifs! Add, pause & play gifs!
+
+![alt text](/responsivePortfolio.png "jifgifs.png")
